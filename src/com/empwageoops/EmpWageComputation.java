@@ -76,7 +76,7 @@ public class EmpWageComputation {
 		 final int isPartTime = 1;
 		 final int isFullTime = 2;
 		 final int empRatePerHrs = 20;
-		 final int noOfWorkingDays = 2;
+		 final int noOfWorkingDays = 20;
 		 final int maxHrInMonth = 10;
 		 
 		 int Emphrs = 0;
@@ -89,13 +89,13 @@ public class EmpWageComputation {
 					Emphrs = 4;
 					break;
 				case isFullTime:
-					Emphrs = 8;
+					Emphrs = 100;
 					break;
 				default:
 					Emphrs = 0;
 				}
 				totalEmpHrs += Emphrs;
-				System.out.println("Day : " + " " + totalWorkingDays + "Emphrs: " + Emphrs);
+				System.out.println(totalWorkingDays + "Emphrs: " + Emphrs);
 			}
 			int totalEmpWage = totalEmpHrs * empRatePerHrs;
 			System.out.println("total Emp Wage" + " " + totalEmpWage);
