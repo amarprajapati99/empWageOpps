@@ -65,8 +65,43 @@ public class EmpWageComputation {
 				System.out.println("Emp Wage" + " " + EmpWage);
 			}
 			System.out.println("totalEmpWage" + " " + totalEmpWage);
+			
 
 
+		
+	}
+	// Creating method
+	public void totalWorkingHrsOrDay() {
+		
+		 final int isPartTime = 1;
+		 final int isFullTime = 2;
+		 final int empRatePerHrs = 20;
+		 final int noOfWorkingDays = 2;
+		 final int maxHrInMonth = 10;
+		 
+		 int Emphrs = 0;
+			int totalEmpHrs = 0;
+			int totalWorkingDays = 0;
+			while (totalEmpHrs <= maxHrInMonth && totalWorkingDays <= noOfWorkingDays) {
+				int empCheck = (int) Math.floor(Math.random() * 10) % 3;
+				switch (empCheck) {
+				case isPartTime:
+					Emphrs = 4;
+					break;
+				case isFullTime:
+					Emphrs = 8;
+					break;
+				default:
+					Emphrs = 0;
+				}
+				totalEmpHrs += Emphrs;
+				System.out.println("Day : " + " " + totalWorkingDays + "Emphrs: " + Emphrs);
+			}
+			int totalEmpWage = totalEmpHrs * empRatePerHrs;
+			System.out.println("total Emp Wage" + " " + totalEmpWage);
+
+		
+		
 		
 	}
 	
@@ -78,6 +113,8 @@ public class EmpWageComputation {
 		ewc.welcomeMsg();
 		EmpWageComputation ewc1=new EmpWageComputation();
 		ewc1.empWage();
+		EmpWageComputation ewc2=new EmpWageComputation();
+		ewc2.totalWorkingHrsOrDay();
 
 	}
 
