@@ -102,14 +102,14 @@ public class EmpWageComputation {
 			System.out.println("total Emp Wage" + " " + totalEmpWage);
 			
 	}
-	public class empWageBuilderMultipleCompony{
+	public class empWageBuilderMultipleCompany{
 		public static final int isPartTime=1;
 		public static final int isFullTime=2;
 		final int empRatePerHrs = 20;
 		 final int noOfWorkingDays = 20;
 		 final int maxHrInMonth = 10;
 		 
-		public int computeEmpWage(String compony , int emprRatePerHr, int numOfWorkingDays
+		public int computeEmpWage(String company , int emprRatePerHr, int numOfWorkingDays
 				,int maxHrInMonth) {
 			int Emphrs = 0;
 			int totalEmpHrs = 0;
@@ -130,7 +130,7 @@ public class EmpWageComputation {
 				System.out.println(totalWorkingDays + "Emphrs: " + Emphrs);
 			}
 			  int totalEmpWage = totalEmpHrs * empRatePerHrs;
-			System.out.println("Total emp wages for compony" + compony + "is" + totalEmpWage );
+			System.out.println("Total emp wages for compony" + company + "is" + totalEmpWage );
 			return totalEmpWage;
 		}
 		
@@ -146,7 +146,9 @@ public class EmpWageComputation {
 		ewc1.empWage();
 		EmpWageComputation ewc2=new EmpWageComputation();
 		ewc2.totalWorkingHrsOrDay();
-		computeEmpWage("20",2,10);
+		computeEmpWage("Dmart",2,10);
+		computeEmpWage("Relaince",2,10);
+		
 		
 
 	}
